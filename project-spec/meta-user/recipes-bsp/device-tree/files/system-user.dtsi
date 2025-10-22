@@ -37,13 +37,31 @@
     view-port = <0x170>;
     drv-vbus;
   };
-
-  xlnx_snd_card_0: xlnx_snd_card@0 {
-      compatible = "xlnx,snd-card";
-      xlnx,model = "xlnx-spdif";
-      xlnx,cpu = <&audio_formatter_0>;
-      xlnx,codec = <&spdif_0>;
+  
+  sound {
+      compatible = "simple-audio-card";
+      simple-audio-card,name = "Zynq Sound Formatter";
+      simple-audio-card,bitclock-master = <&dailink0_master>;
+      simple-audio-card,frame-master = <&dailink0_master>;
+      
+      /* advertise supported rates & formats */
+      simple-audio-card,rates = <32000 48000 96000 192000>;
+      simple-audio-card,formats = "S16_LE", "S24_LE";
+  
+      simple-audio-card,cpu {
+          sound-dai = <&audio_formatter_0>;  /* <- Sound Formatter IP */
+      };
+  
+      dailink0_master: simple-audio-card,codec {
+          sound-dai = <&spdif_0>;
+      };
   };
+};
+
+/* Fix broken link to DAI */
+&audio_formatter_0 {
+  status = "okay";
+  xlnx,tx = <&spdif_0>;
 };
 
 /* Link the SPDIF IP with its Audio Formatter */
