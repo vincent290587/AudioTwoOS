@@ -30,5 +30,5 @@ FILES:${PN} += " \
 	${datadir}/gmediarender \
 "
 
-RDEPENDS:${PN} += "gstreamer1.0 gstreamer1.0-plugins-base"
+RDEPENDS:${PN} += "gstreamer1.0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good libupnp"
 

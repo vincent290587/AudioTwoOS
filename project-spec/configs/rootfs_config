@@ -2271,25 +2271,25 @@ CONFIG_ldd=y
 # gstreamer1.0-plugins-bad 
 #
 CONFIG_gstreamer1.0-plugins-bad=y
-# CONFIG_gstreamer1.0-plugins-bad-meta is not set
-# CONFIG_gstreamer1.0-plugins-bad-dev is not set
+CONFIG_gstreamer1.0-plugins-bad-meta=y
+CONFIG_gstreamer1.0-plugins-bad-dev=y
 # CONFIG_gstreamer1.0-plugins-bad-dbg is not set
 
 #
 # gstreamer1.0-plugins-base 
 #
 CONFIG_gstreamer1.0-plugins-base=y
-# CONFIG_gstreamer1.0-plugins-base-dev is not set
-# CONFIG_gstreamer1.0-plugins-base-apps is not set
-# CONFIG_gstreamer1.0-plugins-base-meta is not set
+CONFIG_gstreamer1.0-plugins-base-dev=y
+CONFIG_gstreamer1.0-plugins-base-apps=y
+CONFIG_gstreamer1.0-plugins-base-meta=y
 # CONFIG_gstreamer1.0-plugins-base-dbg is not set
 
 #
 # gstreamer1.0-plugins-good 
 #
 CONFIG_gstreamer1.0-plugins-good=y
-# CONFIG_gstreamer1.0-plugins-good-meta is not set
-# CONFIG_gstreamer1.0-plugins-good-dev is not set
+CONFIG_gstreamer1.0-plugins-good-meta=y
+CONFIG_gstreamer1.0-plugins-good-dev=y
 # CONFIG_gstreamer1.0-plugins-good-dbg is not set
 
 #
@@ -3700,7 +3700,7 @@ CONFIG_u-boot-tools=y
 #
 CONFIG_packagegroup-xilinx-audio=y
 # CONFIG_packagegroup-xilinx-audio-dbg is not set
-# CONFIG_packagegroup-xilinx-audio-dev is not set
+CONFIG_packagegroup-xilinx-audio-dev=y
 
 #
 # packagegroup-lmsensors 
